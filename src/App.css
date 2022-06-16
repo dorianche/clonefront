@@ -1,0 +1,38 @@
+
+
+.background {
+  background-image: url(./image/beach2.jpg);
+  background-size: cover ;
+  position: relative;
+  height: 100vh; 
+}
+
+.container {
+  display: flex; 
+  background-color: #88b6ca10;
+} 
+
+.picturecont {
+  min-width:40%;
+   
+} 
+
+.picturetext {
+  position: absolute; 
+  top: 30%; 
+  width: 100%; 
+  color: white; 
+  text-align: center; 
+  height: 50px; 
+  line-height: 100%;
+  
+} 
+
+.banner {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.516); 
+  height: 50px; 
+  width: 100%;
+  top: 20%;
+}
+
