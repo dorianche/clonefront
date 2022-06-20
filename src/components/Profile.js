@@ -4,7 +4,8 @@ import { useNavigate } from "react-router-dom";
 import verifySession from "./verifySession"; 
 import Logout from "./Logout"; 
 import ProfilePostList from "./ProfilePostList"; 
-import FriendRequests from "./friendRequests";
+import FriendRequests from "./friendRequests"; 
+import Postform from "./Postform";
 
 function Profile() { 
 
@@ -26,6 +27,7 @@ function Profile() {
   return (
     <div>
         <div>Profile</div> 
+        <Postform />
         <ProfilePostList/>
         <FriendRequests/>
     </div>

@@ -1,29 +1,24 @@
 import { Link } from "react-router-dom"; 
-import React, { useEffect, useState, useCallback } from "react"; 
-import { useNavigate } from "react-router-dom"; 
-import beach from '../image/beach2.jpg'; 
+import React, { useEffect, useState, useCallback, useParams } from "react"; 
+import { useNavigate } from "react-router-dom";  
 import verifySession from "./verifySession"; 
-import DeletePost from "./DeletePost";
 import LikePost from "./LikePost"; 
 import Commentform from "./Commentform"; 
 import CommentList from "./CommentList";
 
+function UserPosts(props) {  
 
+    
 
+    
 
-
-function ProfilePostList() {  
-
-    const [isShown, setIsShown] = useState(false); 
-    const [editIndex, setEditIndex]= useState(null); 
-
-   
-
-    const [list, setList] = useState([]);
+    const [list, setList] = useState([]); 
+    const [editIndex, setEditIndex]= useState(null);  
 
     const getpostList = async () => {
         try {
-            const response = await fetch('http://localhost:9000/profile', {
+            const geturl = `http://localhost:9000/users/${props.id}/posts`
+            const response = await fetch(geturl, {
             method: 'GET',
             headers: {
                 "Content-Type": "application/json",
@@ -48,7 +43,7 @@ function ProfilePostList() {
     }, [])
 
 
-  return ( 
+  return (
     <div>
         {list.map(post => {
             return (
@@ -64,7 +59,7 @@ function ProfilePostList() {
                         </div>
                         )}
                     <CommentList id={post._id} /> 
-                    <DeletePost/>
+                    
                 </div>
             )
         })}
@@ -72,4 +67,4 @@ function ProfilePostList() {
   )
 }
 
-export default ProfilePostList
+export default UserPosts
