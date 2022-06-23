@@ -28,7 +28,7 @@ function Timeline() {
 
     const getTimeline = async () => {
         try {
-            const response = await fetch('http://localhost:9000/timeline', {
+            const response = await fetch('https://pacific-escarpment-23355.herokuapp.com/timeline', {
             method: 'GET',
             headers: {
                 "Content-Type": "application/json",

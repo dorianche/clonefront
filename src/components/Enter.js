@@ -31,7 +31,7 @@ function Enter() {
 
   const signUp = async (body) => {
     try {
-      const response = await fetch('http://localhost:9000/test' , {
+      const response = await fetch('https://pacific-escarpment-23355.herokuapp.com/test' , {
         
         method: 'POST' , 
         headers: {"Content-Type": "application/json"} , 

@@ -25,7 +25,7 @@ function Navbar() {
         console.log(bod)
     
         try {
-            const posturl = `http://localhost:9000/own` 
+            const posturl = `https://pacific-escarpment-23355.herokuapp.com/own` 
             const response = await fetch(posturl, {
             method: 'GET',
             headers: {
