@@ -34,7 +34,7 @@ function AllUsers() {
         const body = {id: e.target.id}; 
         console.log(body);
         try {
-            const targeturl = `http://localhost:9000/users/${e.target.id}`
+            const targeturl = `https://pacific-escarpment-23355.herokuapp.com//users/${e.target.id}`
           const responses = await fetch(targeturl, {
           method: 'PUT',
           headers: {
