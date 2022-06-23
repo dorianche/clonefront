@@ -9,7 +9,7 @@ function Login() {
 
   const logIn = async (body) => {
     try {
-        const response = await fetch('https://pacific-escarpment-23355.herokuapp.com//login', {
+        const response = await fetch('https://pacific-escarpment-23355.herokuapp.com/login', {
             method: 'POST',
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(body)
