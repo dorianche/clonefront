@@ -29,7 +29,7 @@ function PostDetail() {
         console.log(id)
     
         try {
-            const posturl = `http://localhost:9000/posts/${id}`
+            const posturl = `https://pacific-escarpment-23355.herokuapp.com/posts/${id}`
             const response = await fetch(posturl, {
             method: 'GET',
             headers: {

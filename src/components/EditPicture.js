@@ -12,7 +12,7 @@ function EditPicture() {
 
     const createPost = async (body) => {
         try {
-            const response = await fetch('http://localhost:9000/profile', {
+            const response = await fetch('https://pacific-escarpment-23355.herokuapp.com/profile', {
                 method: 'PUT',
                 headers: {
                     "Content-Type": "application/json",

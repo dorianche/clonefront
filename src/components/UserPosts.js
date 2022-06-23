@@ -20,7 +20,7 @@ function UserPosts(props) {
 
     const getpostList = async () => {
         try {
-            const geturl = `http://localhost:9000/users/${props.id}/posts`
+            const geturl = `https://pacific-escarpment-23355.herokuapp.com/users/${props.id}/posts`
             const response = await fetch(geturl, {
             method: 'GET',
             headers: {

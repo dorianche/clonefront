@@ -12,7 +12,7 @@ function DeletePost() {
         console.log(id)
         
         try {
-            const url = `http://localhost:9000/posts/${id}`
+            const url = `https://pacific-escarpment-23355.herokuapp.com/posts/${id}`
             console.log(url)
           const responses = await fetch(url, {
           method: 'DELETE',

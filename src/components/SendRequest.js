@@ -15,7 +15,7 @@ const send = async (e) => {
         const body = {id: props.id}; 
         console.log(body);
         try {
-            const targeturl = `http://localhost:9000/users/${props.id}`
+            const targeturl = `https://pacific-escarpment-23355.herokuapp.com/users/${props.id}`
           const responses = await fetch(targeturl, {
           method: 'PUT',
           headers: {

@@ -9,7 +9,7 @@ function Friends() {
 
     const getpostList = async () => {
         try {
-            const response = await fetch('http://localhost:9000/friends', {
+            const response = await fetch('https://pacific-escarpment-23355.herokuapp.com/friends', {
             method: 'GET',
             headers: {
                 "Content-Type": "application/json",

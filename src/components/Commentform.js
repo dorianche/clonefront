@@ -16,7 +16,7 @@ function Commentform(props , setEditIndex) {
         
 
         try {
-            const response = await fetch('http://localhost:9000/comment', {
+            const response = await fetch('https://pacific-escarpment-23355.herokuapp.com/comment', {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json",

@@ -25,7 +25,7 @@ function LikePost(props) {
           post: props.id
         }; 
         console.log(body);
-        const likeurl = `http://localhost:9000/posts/${props.id}/like`
+        const likeurl = `https://pacific-escarpment-23355.herokuapp.com/posts/${props.id}/like`
         try {
           const responses = await fetch(likeurl, {
           method: 'PUT',

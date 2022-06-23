@@ -11,7 +11,7 @@ function AllUsers() {
 
     const getUs = async () => {
         try {
-            const response = await fetch('http://localhost:9000/allusers', {
+            const response = await fetch('https://pacific-escarpment-23355.herokuapp.com/allusers', {
             method: 'GET',
             headers: {
                 "Content-Type": "application/json",

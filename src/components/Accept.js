@@ -15,7 +15,7 @@ function Accept(props) {
         }; 
         console.log(body);
         try {
-          const responses = await fetch('http://localhost:9000/getrequests', {
+          const responses = await fetch('https://pacific-escarpment-23355.herokuapp.com/getrequests', {
           method: 'PUT',
           headers: {
               "Content-Type": "application/json",

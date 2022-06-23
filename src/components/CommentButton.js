@@ -26,7 +26,7 @@ function CommentButton(props) {
         console.log(bod)
     
         try {
-            const posturl = `http://localhost:9000/posts/${id}/comments` 
+            const posturl = `https://pacific-escarpment-23355.herokuapp.com/posts/${id}/comments` 
             const response = await fetch(posturl, {
             method: 'GET',
             headers: {
