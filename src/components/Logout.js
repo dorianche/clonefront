@@ -11,10 +11,10 @@ const Logout = () => {
         navigate('/login');
     }
 
-    const LogOutButton = (verifySession()) ? <button onClick={clearData}>Log Out</button> : null;
+    const LogOutButton = (verifySession()) ? <span onClick={clearData} className="navbar material-symbols-outlined">logout</span> : null;
 
     return (
-        <div id={'logout'}>{LogOutButton}</div>
+        <div  id={'logout'}>{LogOutButton}</div>
     )
 }
 

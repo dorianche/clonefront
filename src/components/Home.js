@@ -5,7 +5,9 @@ import beach from '../image/beach2.jpg';
 import verifySession from "./verifySession"; 
 import Logout from "./Logout"; 
 import Timeline from "./Timeline"; 
-import Postform from "./Postform";
+import Postform from "./Postform"; 
+import Navbar from "./Navbar"; 
+import Friends from "./Friends";
 
 
 function Home() { 
@@ -26,11 +28,20 @@ function Home() {
 
   return (
     <div>
-        <div>Home</div> 
-        <Logout/> 
-        <Postform/>
-        <Timeline/>
+        
+        <Navbar />
+         
+        
+        <div className="home">
+        <div className="timelinemid">
+            <Friends />
+            <div class='timelinepostcont'>
+                <Postform />
+                <Timeline/>
+            </div>
+        </div>
     </div> 
+    </div>
 
   )
 }

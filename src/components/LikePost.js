@@ -3,9 +3,15 @@ import React, { useEffect, useState, useCallback } from "react";
 import { useNavigate, useParams } from "react-router-dom"; 
 import verifySession from "./verifySession"; 
 
+import result from '../components/img/result.svg' 
+import resultlight from '../components/img/resultlight.svg'
+
 
 function LikePost(props) {
 
+    
+  
+  
     const hello = JSON.parse(localStorage.getItem('userSession'));
     
     //const {id} = useParams(); 
@@ -37,8 +43,16 @@ function LikePost(props) {
       } 
      window.location.reload()
       } 
+
+
   return (
-    <div><button onClick={putLike} >Like</button></div>
+    <div>
+      {props.likes.includes(hello.user._id) 
+       ? <div><button className='but' onClick={putLike} >{props.length} <img src={result} alt="" /></button></div> 
+       : <div><button className='but' onClick={putLike} >{props.length} <img src={resultlight} alt="" /></button></div>
+      }
+    </div>
+    
   )
 }
 

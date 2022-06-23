@@ -31,7 +31,7 @@ function DeletePost() {
       } 
 
   return (
-    <div><button onClick={clickDelete}>Delete</button></div>
+    <div><button className="deletebut" onClick={clickDelete}><span class="material-symbols-outlined">delete</span></button></div>
   )
   }
 

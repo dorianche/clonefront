@@ -3,7 +3,8 @@ import React, { useEffect, useState, useCallback } from "react";
 import { useNavigate, useParams } from "react-router-dom"; 
 import verifySession from "./verifySession"; 
 import UserPosts from "./UserPosts"; 
-import SendRequest from "./SendRequest";
+import SendRequest from "./SendRequest"; 
+import Navbar from "./Navbar";
 
 function UserDetail() { 
 
@@ -52,12 +53,24 @@ function UserDetail() {
     
   return (
     <div> 
-        { user?.first_name &&
-            <div>
-                <div> {user.first_name} {user.last_name} </div> 
-                        <SendRequest visitor={user} id={id} />
-                        <UserPosts id={id} />
-            </div> }
+      <Navbar />
+        <div>
+          
+          { user?.first_name &&
+              <div>
+                <div className='profilecont'>
+                  <div className="profileimg"><img src={user.picture} alt="" /></div>
+                    <div className="profileinfo">
+                      <div class='profilename'> {user.first_name} {user.last_name} </div>
+                      <SendRequest visitor={user} id={id} />
+                    </div>
+                </div>
+                          
+                          <div className="usermid">
+                            <UserPosts id={id} />
+                          </div>
+              </div> }
+        </div>
     </div>
   )
 }

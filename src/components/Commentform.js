@@ -46,20 +46,21 @@ function Commentform(props , setEditIndex) {
       }
 
   return (
-    <div>
+    <div className="commentform">
         <form action="" onSubmit={submitData}>
-        <label htmlFor="text">Your Comment</label> 
-          <input 
+        
+          <input className="commentinput"
             type="textbox" 
             id="text" 
             name="text" 
             required={true}
             value={text} 
             minLength="1"
-            onChange={e => setText(e.target.value)}
+            onChange={e => setText(e.target.value)} 
+            placeholder='YOUR COMMENT'
             
             /> 
-        <input type="submit"   value='Create Comment' />
+        <input class='submitcomment' type="submit"   value='CREATE COMMENT' />
         
         </form>
     </div>

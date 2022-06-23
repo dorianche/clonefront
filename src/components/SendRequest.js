@@ -31,6 +31,7 @@ const send = async (e) => {
       } catch (err) {
         console.log(err);
       }
+      window.location.reload();
       } 
 
       
@@ -38,7 +39,7 @@ const send = async (e) => {
   return (
     <div>
         { ((!visitor.friends.includes(hello.user._id)) && (!visitor.friend_requests.includes(hello.user._id))) &&
-            <button onClick={send}> Send Friend Request </button>
+            <button className="sendbutton" onClick={send}> Send Friend Request </button>
         }
     </div>
   )

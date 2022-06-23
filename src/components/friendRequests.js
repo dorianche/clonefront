@@ -91,11 +91,9 @@ getFriendRequests();
 
 
   return (
-    <div>
+    <div className="requests">
       <div>Friend Requests</div>
-      <div> 
-        {console.log(requests)
-        }
+      
           {requests.map(post => {
               return (
                   <div key='hello'>
@@ -109,7 +107,7 @@ getFriendRequests();
                   </div>
               )
           })}
-      </div>
+      
     </div>
   )
   

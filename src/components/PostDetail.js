@@ -6,6 +6,7 @@ import DeletePost from "./DeletePost";
 import LikePost from "./LikePost";
 import Commentform from "./Commentform";
 import CommentList from "./CommentList";
+import CommentButton from "./CommentButton";
 
 
 
@@ -70,16 +71,13 @@ function PostDetail() {
                         <div>{post?.text}</div>
                         <div>{post.likes.length}</div>
                     <LikePost id={id}  /> 
-                    <button onClick={() => setEditIndex(editIndex => editIndex === post._id ? null : post._id)}>Comment</button>
-                    {editIndex ===post._id && (
-                        <div>
-                            <Commentform setEditIndex={setEditIndex} id={post._id}/>
-                        </div>
-                        )}
+                    
                     {post?.user._id === token.user._id &&
                     <DeletePost />
                     } 
-                    <CommentList id={post._id} />
+                    <CommentButton id={post._id} />
+                    
+                    
                     </div>
                                 }
                 </div>

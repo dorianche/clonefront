@@ -1,38 +1,797 @@
-
-
-.background {
-  background-image: url(./image/beach2.jpg);
-  background-size: cover ;
-  position: relative;
-  height: 100vh; 
-}
-
-.container {
-  display: flex; 
-  background-color: #88b6ca10;
-} 
-
-.picturecont {
-  min-width:40%;
-   
-} 
-
-.picturetext {
-  position: absolute; 
-  top: 30%; 
-  width: 100%; 
-  color: white; 
-  text-align: center; 
-  height: 50px; 
-  line-height: 100%;
+body {
+  text-decoration: none; 
+  background-color: #ff4d40; 
   
 } 
 
-.banner {
+.container {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  background: rgb(48,48,48);
+  background: linear-gradient(180deg, #0C0C0C 0%,  #141414 100%); 
+  height: 100vh;
+} 
+
+.formcontainer {
+  display: flex; 
+  flex-direction: column;
+  width: 80%; 
+  height: 70vh;
+  background-image: url('./components/img/night3.png'); 
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: 0%;
+  border-radius: 10px; 
+  box-shadow: 1px -1px 18px 7px rgba(0,0,0,0.75); 
+  color: #ff4d40; 
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  align-items: center; 
+  
+  
+} 
+
+.form {
+  display: flex; 
+  flex-direction: column; 
+  padding: 80px;
+  gap: 50px; 
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+} 
+
+.passcont, .namecont { 
+  display: flex;
+  gap:20px;
+}  
+
+.welcome {
+  display: flex;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.516); 
-  height: 50px; 
-  width: 100%;
-  top: 20%;
+  top: 40px; 
+  color: antiquewhite; 
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300; 
+  font-size: 1.5rem; 
+  flex-wrap: wrap; 
+  
+
 }
+
+.inputbox {
+  background: transparent; 
+  border: none;
+  border-bottom: 2.5px solid #ff4d40;; 
+  color: #ff4d40; 
+  font-weight: 600; 
+  font-size: 1.1rem;
+  outline: none; 
+  font-family: 'Montserrat', sans-serif;
+  
+} 
+
+.submitbut {
+  border: none;
+  height: 40px; 
+  width: 170px; 
+  align-self: center; 
+  color: white;
+  background-color:#ff4d40; 
+  font-weight: 600; 
+  border-radius: 30px;
+} 
+
+.submitbut:hover {
+  background-color: #5d1510 ;
+} 
+
+
+
+ ::placeholder {
+  color: #ff4d40; 
+  font-weight: 600; 
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav { 
+  display: flex; 
+   
+  align-items: center;
+  top: 0;
+  
+  max-width: 100%;
+  height: 9vh; 
+  color: rgb(241, 241, 241); 
+  background-color: #ff4d40; 
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300; 
+  padding: 0px 50px;
+
+}  
+
+.pagecont {
+  max-width: 100%;
+}
+
+body :Link, :visited {
+  text-decoration: none; 
+  color: rgb(241, 241, 241);
+}
+
+.imgcont {
+  display: flex; 
+  align-items: center;
+  height: 45px; 
+  width: 45px;
+}
+
+.imgcont img {
+  object-fit: cover;
+  height: 55px; 
+  width: 55px;
+  border-radius: 40px;
+} 
+
+.navList { 
+  display: flex;
+  position: absolute;
+  right: 50px;
+  list-style-type: none; 
+  gap: 50px; 
+  align-items: center; 
+  font-weight: 400;
+  text-transform: capitalize;
+} 
+
+.logo {
+  display: flex; 
+  align-items: center; 
+  gap: 20px;
+  font-size: 1.5rem; 
+  font-weight: 600;
+} 
+
+.book {
+  font-size: 3rem;
+} 
+
+.list {
+  font-size: 1.5rem; 
+}
+
+.list:hover {
+  color: #5d1510;
+}  
+
+.navList img:hover {
+  width: 60px; 
+  height: 60px;
+}
+
+
+
+.profilecont {
+  display: flex; 
+  justify-content: space-between; 
+  padding: 50px; 
+  border-bottom: 3px solid antiquewhite;
+  flex-wrap: wrap;
+} 
+
+
+
+.profileinfo {
+  display: flex; 
+  flex-direction: column;
+  gap: 25px;
+  width:70%; 
+  
+} 
+
+.profilename {
+  font-size: 2rem; 
+  color: antiquewhite; 
+  font-family: 'Montserrat', sans-serif; 
+  text-transform: capitalize;
+} 
+
+.profileimg img {
+  width: 30vh; 
+  height: 30vh; 
+  object-fit: cover; 
+  border-radius: 10px; 
+  border: 3px solid antiquewhite;
+} 
+
+.profiletext {
+  color: #181713; 
+} 
+
+.friends {
+  display: flex; 
+  flex-direction: column; 
+  border: 2px solid antiquewhite; 
+  width: 25vh; 
+  padding: 30px; 
+  gap: 30px; 
+  border-radius: 5px; 
+  background-color: #EAE7DC;
+
+} 
+
+
+
+.midprofile {
+  display: flex; 
+  justify-content: space-between;
+  padding: 50px; 
+
+  flex-wrap: wrap; 
+  
+} 
+
+.timelinemid {
+  display: flex; 
+  justify-content: space-between;
+  padding: 50px; 
+  flex-wrap: wrap; 
+  
+} 
+
+
+
+.usermid {
+  display: flex; 
+  flex-direction: column;
+  width: 60%;
+  padding: 50px; 
+}
+
+.friendimg img {
+  object-fit: cover;
+  height: 40px; 
+  width: 40px;
+  border-radius: 40px; 
+  
+} 
+
+.friendinfo {
+  border-bottom: 2px solid #ff4d40; 
+  display: flex; 
+  
+  
+} 
+
+.friendlink {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-around; 
+  gap: 10px; 
+  text-transform: capitalize; 
+  color: #ff4d40;
+  
+} 
+
+.friendname {
+  color: #ff4d40; 
+  font-weight: 600; 
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 0.8rem;
+} 
+
+.friendstitle {
+  color: #ff4d40; 
+  font-weight: 600; 
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 1.2rem;
+}
+
+.changebutton {
+  color: antiquewhite; 
+  font-weight: 600; 
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 0.8rem;
+}
+
+.profilepostcont {
+  display: flex; 
+  flex-direction: column; 
+  
+  width: 60%;
+  padding-right: 10%;
+  
+   
+  
+} 
+
+.timelinepostcont {
+  display: flex; 
+  flex-direction: column; 
+  
+  
+ padding-right: 10%;
+  width: 60%;
+}
+
+
+.postinput {
+  outline: none;
+  background-color: #EAE7DC ; 
+  border: none;
+  border-bottom: 3px solid antiquewhite; 
+  color: #ff4d40;
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: 500;
+  width: 100%; 
+  padding-bottom: 40px;
+  border-radius: 5px;
+} 
+
+h1 {
+  font-family: 'Montserrat', sans-serif; 
+}
+
+.yourpost { 
+  color: antiquewhite; 
+  font-weight: 600; 
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 1.2rem;
+} 
+
+.postbutton {
+  border: none;
+  height: 40px; 
+  width: 170px; 
+  align-self: center; 
+  color: #ff4d40;
+  background-color:#5d1510; 
+  font-weight: 600; 
+  border-radius: 30px; 
+  margin-top: 20px; 
+  margin-bottom: 30px; 
+  font-family: 'Montserrat', sans-serif;
+} 
+
+.postbutton:hover {
+  background-color: antiquewhite  
+} 
+
+.postlist {
+  display: flex; 
+  flex-direction: column; 
+  gap: 25px;
+} 
+
+.imageinput {
+  outline: none;
+  background-color: #EAE7DC ; 
+  border: none;
+  border-bottom: 3px solid antiquewhite; 
+  color: #ff4d40;
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: 500;
+  width: 100%;
+  border-radius: 5px;
+} 
+
+.formpost {
+  display: flex;
+  flex-direction: column; 
+  gap: 20px;
+} 
+
+.postform {
+  border-bottom: 3px solid #5d1510; 
+  margin-bottom: 50px;
+} 
+
+.singlepost img {
+  width: 100%; 
+  
+} 
+
+.singlepost {
+  
+  padding-top: 10px; 
+  background-color: #EAE7DC; 
+  border-radius: 5px; 
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.postname img {
+  object-fit: cover;
+  height: 40px; 
+  width: 40px;
+  border-radius: 40px; 
+} 
+
+.postname {
+  display: flex; 
+  align-items: center; 
+  gap: 20px; 
+  font-size: 1.1rem; 
+  text-transform: capitalize; 
+  padding-left: 10px; 
+  color: #5d1510; 
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: 600;
+} 
+
+.postdate {
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 0.7rem; 
+  font-weight: 600; 
+  padding-left: 5px; 
+  padding: 5px;
+} 
+
+.posttext {
+  padding: 10px 10px 20px 10px; 
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: 400;
+} 
+
+.material-symbols-outlined { 
+  color: #ff4d40;
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+
+  
+}
+
+.but { 
+  display: flex;
+  color: #ff4d40; 
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: 600; 
+  align-items: center; 
+  gap: 5px; 
+  border: none;
+} 
+
+.but img {
+  width: 24px; 
+  height: 24px; 
+} 
+
+.commentbut {
+  display: flex;
+  color: #ff4d40; 
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: 600; 
+  align-items: center; 
+  gap: 5px; 
+  border: none;
+} 
+
+.deletebut {
+  display: flex;
+  color: #ff4d40; 
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: 600; 
+  align-items: center; 
+  gap: 5px; 
+  border: none;
+}
+
+.options {
+  display: flex; 
+  gap: 5px; 
+  padding-bottom: 20px; 
+  padding-top: 10px; 
+  
+} 
+
+.navbar {
+  color: white;
+} 
+
+.commentinput {
+  background: transparent; 
+  border: none;
+  border-bottom: 2.5px solid #ff4d40; 
+  color: #ff4d40; 
+  font-weight: 600; 
+  font-size: 1.1rem; 
+  width: 60%;
+  outline: none; 
+  
+} 
+
+.submitcomment {
+  border: none;
+  height: 30px; 
+  width: 150px; 
+  align-self: center; 
+  color: #ff4d40;
+  background-color:#5d1510; 
+  font-weight: 600; 
+  border-radius: 5px; 
+  margin-top: 20px; 
+  margin-bottom: 30px; 
+  font-family: 'Montserrat', sans-serif;
+} 
+
+.commentblock{
+   padding-top: 20px;
+   width: 100%;
+} 
+
+.alluse {
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  font-family: 'Montserrat', sans-serif;
+gap: 30px; 
+padding-bottom: 200px;
+} 
+
+.userone {
+  display: flex; 
+  flex-direction: column; 
+  gap: 10px; 
+  padding-bottom: 40px;
+} 
+
+.allbutton {
+  border: none;
+  height: 40px; 
+  width: 170px; 
+  align-self: center; 
+  color: #ff4d40;
+  background-color:#5d1510; 
+  font-weight: 600; 
+  border-radius: 30px; 
+  margin-top: 20px; 
+  margin-bottom: 30px; 
+  font-family: 'Montserrat', sans-serif;
+}
+
+.commentcard {
+  display: flex; 
+  flex-direction: column; 
+  gap: 3px; 
+  padding-bottom: 10px; 
+  padding-top: 10px;
+} 
+
+.commentcard img {
+  object-fit: cover;
+  height: 30px; 
+  width: 30px;
+  border-radius: 40px;
+} 
+
+.commentname {
+  display: flex; 
+  align-items: center; 
+  gap: 20px; 
+  color:#5d1510; 
+  font-family: 'Montserrat', sans-serif; 
+  text-transform: capitalize;
+} 
+
+.commentname img {
+  object-fit: cover;
+  height: 30px; 
+  width: 30px;
+  border-radius: 40px;
+}
+
+.home {
+  padding: 50px;
+} 
+
+.sendbutton {
+  border: none;
+  height: 40px; 
+  width: 170px; 
+  align-self: center; 
+  color: #ff4d40;
+  background-color:#5d1510; 
+  font-weight: 600; 
+  border-radius: 30px; 
+  margin-top: 20px; 
+  margin-bottom: 30px; 
+  font-family: 'Montserrat', sans-serif;
+} 
+
+
+.requests {
+  width: 25vw;
+} 
+
+.requestblock {
+  position: absolute; 
+  width: 200px; 
+  top: 50px; 
+  right: 10px;
+  background-color: #EAE7DC; 
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 5px; 
+  padding: 5px;
+
+} 
+
+.acceptbut {
+  border: none;
+  height: 30px; 
+  width: 100px; 
+  align-self: center; 
+  color: #ff4d40;
+  background-color:#5d1510; 
+  font-weight: 600; 
+  border-radius: 30px; 
+  margin-top: 5px; 
+  margin-bottom: 5px; 
+  font-family: 'Montserrat', sans-serif;
+} 
+
+.requesttitle {
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: 600; 
+  color: #5d1510; 
+  padding-bottom: 10px;
+} 
+
+.displayrequests {
+  color: white; 
+  background: transparent; 
+  border: none; 
+  outline: none;
+} 
+
+.displayrequests:hover {
+  color: #5d1510;
+} 
+
+.requestbut { 
+  border: none; 
+  background: transparent;
+} 
+
+.navwhite {
+  color: white;
+} 
+
+.navicons {
+  display: flex; 
+  gap: 30px;
+} 
+
+.navbar:hover {
+  color: #5d1510;
+}
+
+
+@media (max-width: 600px) { 
+
+
+
+.navicons {
+  position: fixed; 
+  bottom: 0; 
+  right: 0; 
+  width: 100vw; 
+  align-items: center;
+  height: 10vh; 
+  background-color: #ff4d40;
+  justify-content: space-around; 
+  gap: 30px;
+  color: white; 
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.list {
+  display: none;
+} 
+
+
+
+.nav {
+  
+  
+  justify-content: space-between; 
+  padding: 0;
+  position: relative;
+  width: 100vh;
+} 
+
+.logo {
+  padding: 0;
+  padding-left: 15px; 
+  
+} 
+
+.profilecont {
+  gap: 20px;
+}
+
+.midprofile {
+  gap: 20px;
+  padding-top: 30px; 
+  padding-left: 15px;
+  padding-right: 15px; 
+  
+  justify-content: center;
+} 
+
+
+
+.timelinemid {
+padding: 0;
+gap: 20px;
+  padding-top: 30px; 
+  padding-left: 15px;
+  padding-right: 15px; 
+} 
+
+.home {
+  padding: 0;
+}
+
+
+.friends {
+  width: 100vw; 
+  margin-bottom: 50px;
+} 
+
+.profilepostcont { 
+  display: flex;
+  width: 100vw; 
+  padding: 0;
+} 
+
+
+
+.postform {
+  width: 90vw;
+  justify-content: center; 
+} 
+
+.postlist {
+  padding: 0; 
+  padding-bottom: 200px;
+  width: 90vw;
+}
+
+.usermid { 
+  display: flex; 
+  gap: 20px;
+  padding: 0; 
+  justify-content: center; 
+  width: 90vw; 
+  padding-top: 30px; 
+  padding-left: 15px;
+  padding-right: 15px; 
+  padding-bottom: 200px;
+} 
+
+.requestblock {
+  position: fixed; 
+  top: 60px;
+  bottom: 150;
+  width: 90vw; 
+  min-height: 50vh;
+} 
+
+.userblock {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  gap: 20px; 
+  width: 90vw;
+} 
+
+.singlepost {
+  width: 90vw;
+}
+
+} 
+
+
 

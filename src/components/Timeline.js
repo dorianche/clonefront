@@ -4,8 +4,10 @@ import { useNavigate } from "react-router-dom";
 import beach from '../image/beach2.jpg'; 
 import verifySession from "./verifySession"; 
 import LikePost from "./LikePost"; 
+import { format ,formatDistance, subDays } from 'date-fns'; 
 import Commentform from "./Commentform"; 
-import CommentList from "./CommentList";
+import CommentList from "./CommentList"; 
+import CommentButton from "./CommentButton";
 
 function Timeline() {  
 
@@ -40,31 +42,36 @@ function Timeline() {
         return data;
     
       } catch (err) {
-          console.log(err);
+          alert("Incorrect Email or Password");
       }
     }  
 
     useEffect(() => {
       getTimeline();
-    }, [])
+    }, []) 
+
+    const gettoday = (date) => {
+      const dato = format(new Date(date), "dd/MM/yyyy HH:mm:ss"); 
+      return(dato); 
+     
+      
+  }
 
   return (
-    <div>
+    <div className="postlist">
         {timeline.map(post => {
             return (
-                <div>
-                    <div>{post.user.first_name} {post.user.last_name}</div>
-                    <div>{post.timestamp}</div>
-                    <div>{post.text}</div>
-                    <div>{post.likes.length}</div>
-                    <LikePost id={post._id}/> 
-                    <button onClick={() => setEditIndex(editIndex => editIndex === post._id ? null : post._id)}>Comment</button>
-                    {editIndex ===post._id && (
-                        <div>
-                            <Commentform setEditIndex={setEditIndex} id={post._id}/>
-                        </div>
-                        )}
-                    <CommentList id={post._id} />
+              <div className="singlepost">
+                    <Link to={`/users/${post.user._id}`}>
+                        <div class='postname'><img src={post.user.picture} alt="" /> {post.user.first_name} {post.user.last_name}</div>
+                    </Link> 
+                    <div className="postdate">{gettoday(post.timestamp)}</div> 
+                    <div className="posttext">{post.text}</div> 
+                    <div><img src={post.image} alt="" /></div>
+                    <div className="options">
+                      <LikePost likes={post.likes} length={post.likes.length} id={post._id}/>
+                      <CommentButton id={post._id} />
+                    </div>
                 </div>
             )
         })} 

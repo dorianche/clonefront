@@ -35,48 +35,45 @@ const submitData = async (e) => {
 
   return (
     <div className="container">
-      <div className='picturecont'>
-        <div className="background">
+      <div className="welcome">Welcome to CloneBook</div>
+      
+        <div className="formcontainer">
+          <h2>LOG IN</h2>
           
-          <div className="banner">
-            <div className="picturetext">Clonebook</div>
-          </div>
+          <form className="form" action="" onSubmit={submitData}>
+
+            <input className="inputbox"
+              
+              id="username"
+              name="username"
+              value={email}
+              required={true}
+              placeholder='EMAIL'
+              onChange={e => setEmail(e.target.value)}
+              />
+            
+              
+              <input className="inputbox"
+                type="password"
+                id="password"
+                name="password"
+                value={password}
+                required={true}
+                placeholder='PASSWORD'
+                onChange={e => setPassword(e.target.value)}
+                />
+              
+              
+            
+            <input className="submitbut" type="submit" value="LOG IN" />
+          </form>
+          
+          
+          
+          Don't have an account ?
+          <Link to='/signup'>SIGN UP</Link>
+                </div>
         </div>
-      </div> 
-      <div className='signcont'>
-        <div className='adtext'>Log in to your Clonebook</div>
-        <div className='form'> 
-        <form action="" onSubmit={submitData}>
-          
-          <label htmlFor="email">Email</label> 
-          <input 
-            type="text" 
-            id="username" 
-            name="username" 
-            required={true}
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-            /> 
-
-          <label htmlFor="password">Password</label> 
-          <input 
-            type="password" 
-            id="password" 
-            required={true} 
-            name="password"
-            value={password}
-            onChange={e => setPassword(e.target.value)}
-            /> 
-
-          
-          <input type="submit" value="Login" /> 
-        </form>
-           
-           
-        </div> 
-       
-      </div>
-    </div>
   )
 }
 

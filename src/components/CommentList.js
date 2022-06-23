@@ -37,7 +37,7 @@ function CommentList(props) {
         }) 
         
         const data = await response.json(); 
-       // console.log(data); 
+        console.log(data); 
         setComment(data); 
         
        // console.log(post)
@@ -59,11 +59,12 @@ function CommentList(props) {
     <div>
     {comment.map(post => {
         return (
-            <div>
-                <div>{post.user.first_name} {post.user.last_name}</div>
+            
+            <div className="commentcard" key={post._id}>
+                <div className="commentname"><img src={post.user.picture} alt="" /> {post.user.first_name} {post.user.last_name}</div>
                 <div>{post.timestamp}</div>
                 <div>{post.text}</div>
-                <div>{post.likes.length}</div>
+                
                 
             </div>
         )

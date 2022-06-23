@@ -3,10 +3,13 @@ import React, { useEffect, useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom"; 
 import beach from '../image/beach2.jpg'; 
 import verifySession from "./verifySession"; 
+import { format ,formatDistance, subDays } from 'date-fns';
 import DeletePost from "./DeletePost";
 import LikePost from "./LikePost"; 
 import Commentform from "./Commentform"; 
-import CommentList from "./CommentList";
+import CommentList from "./CommentList"; 
+import CommentButton from "./CommentButton"; 
+
 
 
 
@@ -39,7 +42,14 @@ function ProfilePostList() {
       } catch (err) {
           console.log(err);
       }
-    } 
+    }  
+
+    const gettoday = (date) => {
+        const dato = format(new Date(date), "dd/MM/yyyy HH:mm:ss"); 
+        return(dato); 
+       
+        
+    }
 
     
 
@@ -49,22 +59,24 @@ function ProfilePostList() {
 
 
   return ( 
-    <div>
+    <div className="postlist">
         {list.map(post => {
             return (
-                <div>
-                    <div>{post.user.first_name} {post.user.last_name}</div>
-                    <div>{post.timestamp}</div>
-                    <div>{post.text}</div>
-                    <div>{post.likes.length}</div> 
-                    <LikePost id={post._id}/>  <button onClick={() => setEditIndex(editIndex => editIndex === post._id ? null : post._id)}>Comment</button>
-                    {editIndex ===post._id && (
-                        <div>
-                            <Commentform setEditIndex={setEditIndex} id={post._id}/>
-                        </div>
-                        )}
-                    <CommentList id={post._id} /> 
-                    <DeletePost/>
+                <div className="singlepost">
+                    
+                    <Link to={`/users/${post.user._id}`}>
+                        <div className='postname'><img src={post.user.picture} alt="" /> {post.user.first_name} {post.user.last_name}</div>
+                    </Link> 
+                    <div className="postdate">{gettoday(post.timestamp)}</div>
+                    <div className="posttext">{post.text}</div>
+                    <div><img src={post.image} alt="" /></div>
+                   
+                    <div className="options">
+                        <LikePost likes={post.likes} length={post.likes.length} id={post._id}/>
+                        <CommentButton id={post._id} /> 
+                         
+                    </div> 
+                    
                 </div>
             )
         })}

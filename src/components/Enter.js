@@ -50,71 +50,75 @@ function Enter() {
   return (
     
     <div className="container">
-      <div className='picturecont'>
-        <div className="background">
+      <div className="welcome">Welcome to CloneBook</div>
+      
+        <div className="formcontainer">
+          <h2>SIGN UP</h2>
           
-          <div className="banner">
-            <div className="picturetext">Clonebook</div>
-          </div>
+          <form className="form" action="" onSubmit={submitData}>
+            <div className="namecont">
+              
+              <input className="inputbox"
+                type="text"
+                id="first_name"
+                name="first_name"
+                value={first_name}
+                required={true} 
+                placeholder='FIRST NAME'
+                onChange={e => setFirstname(e.target.value)}
+                />
+              
+              <input className="inputbox"
+                type="text"
+                id="last_name"
+                name="last_name"
+                value={last_name}
+                required={true}
+                placeholder='LAST NAME'
+                onChange={e => setLastname(e.target.value)}
+                />
+            </div>
+            
+            <input className="inputbox"
+              type="email"
+              id="username"
+              name="username"
+              value={email}
+              required={true}
+              placeholder='EMAIL'
+              onChange={e => setEmail(e.target.value)}
+              />
+            <div className='passcont'>
+              
+              <input className="inputbox"
+                type="password"
+                id="password"
+                name="password"
+                value={password}
+                required={true}
+                placeholder='PASSWORD'
+                onChange={e => setPassword(e.target.value)}
+                />
+              
+              <input className="inputbox"
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                value={confirmPassword}
+                required={true} 
+                placeholder='CONFIRM PASSWORD'
+                onChange={e => setConfirmPassword(e.target.value)}
+                />
+            </div>
+            <input className="submitbut" type="submit" value="SIGN UP" />
+          </form>
+          
+          
+          
+          Already have an account ?
+          <Link to='/login'>LOG IN</Link>
+                </div>
         </div>
-      </div> 
-      <div className='signcont'>
-        <div className='adtext'>Welcome to the most complete social media.</div>
-        <div className='form'> 
-        <form action="" onSubmit={submitData}>
-          <label htmlFor="first_name">First Name</label> 
-          <input 
-            type="text" 
-            id="first_name" 
-            name="first_name" 
-            value={first_name}
-            onChange={e => setFirstname(e.target.value)}
-            /> 
-
-          <label htmlFor="last_name">Last Name</label> 
-          <input 
-            type="text" 
-            id="last_name" 
-            name="last_name"
-            value={last_name}
-            onChange={e => setLastname(e.target.value)}
-            /> 
-
-          <label htmlFor="email">Email</label> 
-          <input 
-            type="text" 
-            id="username" 
-            name="username"
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-            /> 
-
-          <label htmlFor="password">Password</label> 
-          <input 
-            type="password" 
-            id="password" 
-            name="password"
-            value={password}
-            onChange={e => setPassword(e.target.value)}
-            /> 
-
-          <label htmlFor="confirmPassword">Confirm Password</label> 
-          <input 
-            type="password" 
-            id="confirmPassword" 
-            name="confirmPassword" 
-            value={confirmPassword}
-            onChange={e => setConfirmPassword(e.target.value)} 
-            />
-          <input type="submit" value="Sign Up" /> 
-        </form>
-           
-           
-        </div> 
-        Already have an account ? 
-        <Link to='/login'>Login</Link>
-      </div>
-    </div>
     
   )
 }

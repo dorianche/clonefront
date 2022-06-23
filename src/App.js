@@ -8,7 +8,8 @@ import Profile  from './components/Profile';
 import AllUsers from './components/AllUsers'; 
 import Requser from './components/Requser'; 
 import PostDetail from './components/PostDetail'; 
-import UserDetail from './components/UserDetail';
+import UserDetail from './components/UserDetail'; 
+import EditPicture from './components/EditPicture';
 
 
 function App() {
@@ -17,14 +18,15 @@ function App() {
       
       
       <Routes> 
-        <Route path='/test' element={<Enter/>} /> 
+        <Route path='/signup' element={<Enter/>} /> 
         <Route path='/login' element={<Login/>} /> 
         <Route path='/' element={<Home/>} /> 
         <Route path='/profile' element={<Profile/>} /> 
         <Route path='/allusers' element={<AllUsers/>} /> 
         <Route path='/ruser' element={<Requser/>} /> 
         <Route path='/posts/:id' element={<PostDetail/>} /> 
-        <Route path='/users/:id' element={<UserDetail/>} />
+        <Route path='/users/:id' element={<UserDetail/>} /> 
+        <Route path='/update' element={<EditPicture/>} /> 
       </Routes>
 
     

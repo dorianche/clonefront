@@ -3,6 +3,7 @@ import React, { useEffect, useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom"; 
 import beach from '../image/beach2.jpg'; 
 import verifySession from "./verifySession"; 
+import Navbar from "./Navbar";
 
 function AllUsers() { 
 
@@ -60,18 +61,23 @@ function AllUsers() {
 
   return (
     <div>
-        <div>AllUsers</div>
-        <div>
-        {allUsers.map(post => {
-            return (
-                <div>
-                    <div>{post.first_name} {post.last_name}</div>
-                    <div>{post.username}</div> 
-                    <button id={post._id} onClick={sendRequest}>Send Friend Request</button>
-                    
-                </div>
-            )
-        })} 
+        <Navbar />
+        <div className="alluse">
+            <h1>AllUsers</h1>
+            <div>
+            {allUsers.map(post => {
+                return (
+                    <div className="userone">
+                        <Link to={`/users/${post._id}`}>
+                            <div className='postname'><img src={post.picture} alt="" /> {post.first_name} {post.last_name}</div>
+                        </Link>
+                        <div>{post.username}</div>
+                        <button className="allbutton" id={post._id} onClick={sendRequest}>Send Friend Request</button>
+            
+                    </div>
+                )
+            })}
+            </div>
         </div>
     </div>
   )
