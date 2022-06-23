@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/clonefront/static/css/main.3e9eca61.css",
+    "main.js": "/clonefront/static/js/main.3d1031a7.js",
+    "static/js/787.07da5a20.chunk.js": "/clonefront/static/js/787.07da5a20.chunk.js",
+    "static/media/night3.png": "/clonefront/static/media/night3.ddc8b3a779802bb68e12.png",
+    "static/media/beach2.jpg": "/clonefront/static/media/beach2.c79d94073c4ed10974f9.jpg",
+    "static/media/resultlight.svg": "/clonefront/static/media/resultlight.bff1f923d1df531236b72443f26b5e7a.svg",
+    "index.html": "/clonefront/index.html",
+    "static/media/result.svg": "/clonefront/static/media/result.225322e1c7670abafdebeb788099be30.svg",
+    "main.3e9eca61.css.map": "/clonefront/static/css/main.3e9eca61.css.map",
+    "main.3d1031a7.js.map": "/clonefront/static/js/main.3d1031a7.js.map",
+    "787.07da5a20.chunk.js.map": "/clonefront/static/js/787.07da5a20.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3e9eca61.css",
+    "static/js/main.3d1031a7.js"
+  ]
+}
